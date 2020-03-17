@@ -2,8 +2,8 @@ pipeline {
    agent any
 
    tools {
-      // Install the Maven version configured as "M3" and add it to the path.
-      maven "maven_2_3_6"
+      // Install the Maven version configured as "maven_3_6_2" and add it to the path.
+      maven "maven_3_6_2"
    }
 
    stages {
