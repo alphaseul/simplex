@@ -32,7 +32,7 @@ pipeline {
             checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/fhoubart/demo-cicd.git']]])
          }
       }
-      stage('Get info from POM') {
+      /**stage('Get info from POM') {
           steps {
             script {
                 pom = readMavenPom file: 'pom.xml'
@@ -50,7 +50,7 @@ pipeline {
             echo filepath
             echo "isSnapshot: ${isSnapshot}"
           }
-      }
+      }**/
       stage('Build') {
           steps {
               sh 'mvn clean package'
